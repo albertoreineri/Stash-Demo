@@ -31,6 +31,22 @@ nella pagina ETF ti prepara la riga da inserire in `config/etf-watchlist.json`
 e i comandi per aggiornare i dati. Il sito statico non può farlo da solo, perché
 Yahoo Finance non risponde al browser.
 
+## Requisiti
+
+- **Node.js 20 o superiore** e npm: servono per installare le dipendenze e
+  aggiornare i dati (`npm install`, `npm run ...`). Chi vuole solo guardare il
+  sito con i dati già presenti può farne a meno.
+- **Un browser moderno** (Chrome, Firefox, Safari, Edge) per usare il sito.
+- **Git**, per clonare il repository (oppure scaricalo come ZIP da GitHub).
+- **Un server statico locale**, per aprire il sito: basta uno di questi due
+  comandi, non serve installare nient'altro.
+  - Python 3, già presente su macOS e molte distribuzioni Linux: `python3 -m http.server -d docs 8000`
+  - Node.js: `npx serve docs`
+- **Connessione internet** solo per aggiornare i dati. Il sito, una volta
+  aperto, funziona anche offline.
+
+Non serve un database, né un account, né una chiave API per il sito.
+
 ## Avvio in locale
 
 Serve Node.js 20 o superiore per aggiornare i dati. Per guardare il sito basta
