@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-10-06T19:12:56.875Z",
+  "computed_at": "2026-10-06T20:18:48.493Z",
   "options": {
     "years": 5,
     "returnBasis": "3y",
@@ -7,10 +7,14 @@
   },
   "benchmarks": {
     "inflation_pct": 2,
+    "inflation_source": "Eurostat, HICP area euro, variazione annua",
+    "inflation_period": "2025-12",
     "deposit_account_gross_pct": 2.5,
+    "deposit_source": "BCE, tasso sui depositi (riferimento di mercato)",
+    "deposit_date": "2026-10-06",
     "deposit_tax_rate": 0.26,
-    "updated_at": "2026-09-23",
-    "note": "Valori di default, modificabili poi direttamente sul sito (i campi restano poi salvati nel browser). deposit_account_gross_pct è LORDO: gli interessi di un conto deposito sono tassati al 26% come qualunque rendita finanziaria (a differenza dei titoli di Stato, che hanno l'aliquota agevolata 12,5%) — il sito confronta i rendimenti netti dei titoli con l'equivalente netto del conto deposito, non con il lordo. Aggiorna a mano quando cambiano le stime (es. bollettino Banca d'Italia/ISTAT per l'inflazione, il miglior tasso vincolato che trovi per il conto deposito): non sono recuperati automaticamente, cambiano di poco e vanno letti con giudizio, non scrapeati."
+    "updated_at": "2026-10-06",
+    "note": "Valori di riferimento pubblici, aggiornati dallo script scripts/update-benchmarks.mjs. Sono una base di confronto, non una previsione: puoi cambiarli nel sito, il cambio resta nel tuo browser."
   },
   "etfs": [
     {

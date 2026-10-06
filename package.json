@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "description": "Monitoraggio personale di obbligazioni di Stato, ETF, fondi e conti deposito: dati pubblici, diario locale, nessun account.",
   "scripts": {
+    "update:benchmarks": "node scripts/update-benchmarks.mjs",
     "import:bonds": "node scripts/import-bonds.mjs",
     "import:cashflows": "node scripts/import-cashflows.mjs",
     "screen": "node scripts/screen.mjs",

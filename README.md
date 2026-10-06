@@ -19,6 +19,9 @@ non c'è un account, non c'è un server, e i tuoi dati restano sul tuo computer.
   inserito a mano), voci di riflessione. Tutto in `localStorage` del browser,
   con esporta/importa JSON.
 - **Conti deposito:** valore calcolato da tasso lordo e scadenza, tassa 26%.
+- **Confronto con l'inflazione e con un conto deposito:** i riferimenti
+  sono pubblici (inflazione Eurostat per l'area euro, tasso sui depositi della
+  BCE) e si aggiornano con `npm run update:benchmarks`. Puoi cambiarli nel sito.
 
 ## Avvio in locale
 
