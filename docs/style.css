@@ -1329,7 +1329,7 @@ button.broker-chip:hover {
   padding: 9px 12px 11px;
   background: none;
   border: none;
-  color: var(--text-secondary);
+  color: var(--critical);
   font: inherit;
   font-size: 0.85rem;
   font-weight: 550;
@@ -1337,7 +1337,7 @@ button.broker-chip:hover {
 }
 
 .nav-guide:hover {
-  color: var(--text-primary);
+  opacity: 0.8;
 }
 
 .guide-intro {
