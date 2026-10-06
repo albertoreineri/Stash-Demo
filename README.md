@@ -8,6 +8,9 @@ computer (e sul tuo, se lo usi).
 > **Non è consulenza finanziaria.** Mostra dati pubblici e calcoli semplici
 > (rendimenti, tasse, proiezioni storiche). Le decisioni sono tue.
 
+Questo progetto è un passatempo che ho sviluppato per uso personale e che
+condivido online così com'è, senza garanzie di alcun tipo.
+
 ## Cosa c'è
 
 - **Obbligazioni:** i BTP, i BOT e gli altri titoli di Stato italiani, con
@@ -100,23 +103,24 @@ Un bottone nel sito che lancia l'aggiornamento è possibile, ma richiede una
 funzione sul server che avvia il workflow con un token GitHub. È un'opzione
 avanzata, che io ho usato nella mia versione privata; non è inclusa qui.
 
-## Pubblicarlo online (facoltativo)
+## Pubblicazione online
 
-Il sito è una cartella statica (`docs/`): si può pubblicare su GitHub Pages o su
-Cloudflare Pages senza modifiche.
+Il sito è una cartella statica (`docs/`) e può essere pubblicato su GitHub
+Pages o su Cloudflare Pages senza modifiche.
 
-**Attenzione:** GitHub Pages è pubblico e non può chiedere una password. Va
-bene per una versione dimostrativa senza dati tuoi. Se usi il sito con dati
-reali, o se sincronizzi il diario online, consiglio di proteggerlo con
-**Basic Auth** come minimo, perché sono dati sensibili e privati.
+Dati e protezione:
 
-Su Cloudflare Pages si può fare: il sito chiede utente e password prima di
-mostrare qualsiasi pagina. Questa protezione richiede una funzione di
-middleware sul server, che questo progetto non include ancora. Se vuoi
-saperne di più, scrivimi a **info@albertoreineri.it**: ne parlo lì.
+- **GitHub Pages** è accessibile a chiunque e non supporta una password. È
+  adatto solo alla versione dimostrativa, senza dati reali.
+- **Cloudflare Pages** permette di proteggere il sito con Basic Auth. Consiglio
+  questa protezione, come minimo, se usi dati reali o se sincronizzi il diario
+  online: sono dati personali e sensibili.
+- Il salvataggio online del diario non è incluso in questa versione: il diario
+  funziona in locale, con esportazione e importazione in JSON.
 
-Il salvataggio online del diario non è incluso in questa versione: il diario
-funziona in locale con esportazione e importazione in JSON.
+La protezione con Basic Auth su Cloudflare richiede una funzione di middleware
+sul server, che questo progetto non include. Per approfondire, scrivi a
+info@albertoreineri.it.
 
 ## Struttura
 
