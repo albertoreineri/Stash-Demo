@@ -1,9 +1,10 @@
 # Stash
 
-Ho costruito Stash per guardare le obbligazioni di Stato italiane, gli ETF, i
-fondi e i conti deposito, e per tenere un diario delle mie decisioni. Gira nel
-browser: non c'è un account, non c'è un server, e i dati restano sul mio
-computer (e sul tuo, se lo usi).
+Ho creato Stash per tenere sotto controllo i dati finanziari che mi interessano:
+obbligazioni, ETF, fondi, conti deposito ecc.
+
+È un'app molto semplice che gira nel browser. Non ci sono account, né server.
+I dati restano tutti sul computer di chi la usa.
 
 > **Non è consulenza finanziaria.** Mostra dati pubblici e calcoli semplici
 > (rendimenti, tasse, proiezioni storiche). Le decisioni sono tue.
