@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stash — Obbligazioni</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="./diario.html">
+    <span class="brand-name">Stash</span>
+    <span class="brand-sub">personal finance</span>
+  </a>
+
+  <div class="sync" id="sync-status"></div>
+
+  <div class="nav-links">
+    <a href="./index.html" class="active">Obbligazioni</a>
+    <a href="./etf.html">ETF</a>
+    <a href="./diario.html">Diario</a>
+  </div>
+</nav>
+
+
+
+  <h1>Obbligazioni</h1>
+  <div class="meta" id="meta">Caricamento...</div>
+  <div class="benchmarks" id="benchmarks"></div>
+
+  <form class="filters" id="filters">
+    <label>Scadenza da (anni)
+      <input type="number" id="f-years-min" value="0" min="0" step="0.5">
+    </label>
+    <label>Scadenza a (anni)
+      <input type="number" id="f-years-max" value="3" min="0.1" step="0.5">
+    </label>
+    <label>Paese
+      <select id="f-country"><option value="">Tutti</option></select>
+    </label>
+    <label>Valuta
+      <select id="f-currency"><option value="">Tutte</option></select>
+    </label>
+    <label>Rischio massimo
+      <select id="f-risk">
+        <option value="">Tutti</option>
+        <option value="4">Molto basso</option>
+        <option value="10">Basso (Investment Grade)</option>
+        <option value="13">Moderato</option>
+        <option value="16">Elevato</option>
+      </select>
+    </label>
+    <label>Rendimento netto minimo (%)
+      <input type="number" id="f-min-yield" placeholder="nessuno" step="0.1">
+    </label>
+    <label>Importo da investire (€)
+      <input type="number" id="f-amount" value="10000" min="1" step="500">
+    </label>
+    <label>Inflazione attesa (%)
+      <input type="number" id="f-inflation" step="0.1">
+    </label>
+    <label>Conto deposito lordo (%)
+      <input type="number" id="f-deposit" step="0.1">
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="f-fav">
+      Solo ★ preferiti
+    </label>
+    <label>&nbsp;
+      <button type="button" class="btn-secondary" id="btn-export">Scarica CSV</button>
+    </label>
+  </form>
+
+  <div class="wrap">
+    <table id="bonds-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th data-key="description">Titolo</th>
+          <th data-key="country">Paese</th>
+          <th data-key="redemption_date">Scadenza</th>
+          <th data-key="risk_score">Rischio</th>
+          <th data-key="net_ytm_trend_30d">Trend 30gg</th>
+          <th data-key="cost_today">Costo oggi €</th>
+          <th data-key="net_annualized_pct">Netto ann. %</th>
+          <th data-key="vs_benchmark">vs benchmark</th>
+          <th data-key="net_profit">Guadagno netto €</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="footnote">
+    "Netto annualizzato" viene dal piano cashflow reale del titolo quando
+    disponibile (costo di ingresso, cedole, rimborso, tassazione 12,5% sui
+    titoli di Stato italiani / 26% sugli altri); dove manca il dettaglio è
+    una stima dal rendimento netto dichiarato dalla fonte, capitalizzato
+    sugli anni residui — meno precisa, segnalata con "stima" invece di "piano
+    cashflow" al passaggio del mouse sulla riga.
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-panel" id="modal-panel"></div>
+  </div>
+
+<script type="module" src="./js/bonds.js"></script>
+</body>
+</html>

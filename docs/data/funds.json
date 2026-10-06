@@ -1,0 +1,52 @@
+{
+  "imported_at": "2026-10-06T19:44:20.223Z",
+  "count": 5,
+  "funds": [
+    {
+      "isin": "IT0001260618",
+      "name": "Eurizon Azioni Energia e Materie Prime Acc",
+      "source": "borsa-fondo",
+      "price": 21.845,
+      "previous_close": 21.736,
+      "currency": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "isin": "LU2357531032",
+      "name": "Eurizon Fund Equity High Dividend R Acc",
+      "source": "borsa-fondo",
+      "price": 157.07,
+      "previous_close": 156.53,
+      "currency": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "isin": "LU2050470348",
+      "name": "Eurizon Fund Equity Innovation R Acc",
+      "source": "yahoo",
+      "price": 234.49,
+      "previous_close": 231.66,
+      "currency": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "isin": "IT0005698854",
+      "name": "Eurizon Strategia Obbligazionaria 3a Ed.2 26 D Dis",
+      "source": "yahoo",
+      "price": 4.919,
+      "previous_close": 4.925,
+      "currency": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "isin": "IT0005705469",
+      "name": "ISP EPP Metal Min 33",
+      "source": "borsa-certificato",
+      "price": 933.54,
+      "previous_close": null,
+      "currency": "EUR",
+      "date": "2026-10-06"
+    }
+  ],
+  "errors": []
+}

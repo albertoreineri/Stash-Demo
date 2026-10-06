@@ -1,0 +1,11 @@
+[
+  { "ticker": "SWDA.MI", "isin": "IE00B4L5Y983", "nickname": "iShares Core MSCI World (Acc)", "active": true },
+  { "ticker": "VWCE.DE", "isin": "IE00BK5BQT80", "nickname": "Vanguard FTSE All-World (Acc)", "active": true },
+  { "ticker": "VHVE.L", "isin": "IE00BK5BQV03", "nickname": "Vanguard FTSE Developed World (Acc)", "active": true },
+  { "ticker": "MXWO.L", "isin": "IE00B60SX394", "nickname": "Invesco MSCI World", "active": true },
+  { "ticker": "SSAC.L", "isin": "IE00B6R52259", "nickname": "iShares MSCI ACWI (Acc)", "active": true },
+  { "ticker": "CSSPX.MI", "isin": "IE00B5BMR087", "nickname": "iShares Core S&P 500 (Acc)", "active": true },
+  { "ticker": "VUAA.L", "isin": "IE00BFMXXD54", "nickname": "Vanguard S&P 500 (Acc)", "active": true },
+  { "ticker": "VUTY.MI", "isin": "IE00BZ163G84", "nickname": "Vanguard USD Treasury Bond (Acc)", "active": true },
+  { "ticker": "XEON.DE", "isin": "LU0290358497", "nickname": "Xtrackers EUR Overnight Rate Swap", "active": true }
+]

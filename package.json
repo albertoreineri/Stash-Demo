@@ -1,0 +1,26 @@
+{
+  "name": "stash-demo",
+  "private": false,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Monitoraggio personale di obbligazioni di Stato, ETF, fondi e conti deposito: dati pubblici, diario locale, nessun account.",
+  "scripts": {
+    "import:bonds": "node scripts/import-bonds.mjs",
+    "import:cashflows": "node scripts/import-cashflows.mjs",
+    "screen": "node scripts/screen.mjs",
+    "import:etf": "node scripts/import-etf.mjs",
+    "import:funds": "node scripts/import-funds.mjs",
+    "screen:etf": "node scripts/screen-etf.mjs",
+    "notify": "node scripts/notify.mjs",
+    "notify:etf-signals": "node scripts/notify-etf-signals.mjs",
+    "run": "node scripts/run.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fflate": "^0.8.3"
+  },
+  "license": "MIT"
+}

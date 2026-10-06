@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "favorites": {
+    "bonds": ["IT0005725236"],
+    "etfs": ["VWCE.DE"]
+  },
+  "purchases": [
+    {
+      "id": "esempio-bot",
+      "kind": "bond",
+      "name": "BOT esempio (scadenza gennaio 2027)",
+      "ident": "IT0005725236",
+      "date": "2026-09-25",
+      "cost": 996.9,
+      "quantity": 1000,
+      "coupons_received": 0,
+      "maturity": null,
+      "manual_value": null,
+      "broker": "Broker A",
+      "guaranteed": false,
+      "note": "Dato di esempio: sostituiscilo con i tuoi acquisti."
+    },
+    {
+      "id": "esempio-etf",
+      "kind": "etf",
+      "name": "ETF esempio (mondo, accumulo)",
+      "ident": "IE00BK5BQT80",
+      "date": "2026-09-25",
+      "cost": 4078.55,
+      "quantity": 24,
+      "coupons_received": 0,
+      "maturity": null,
+      "manual_value": null,
+      "broker": "Broker A",
+      "guaranteed": false,
+      "note": "Dato di esempio."
+    },
+    {
+      "id": "esempio-deposito",
+      "kind": "deposit",
+      "name": "Conto deposito esempio, 12 mesi",
+      "ident": "",
+      "date": "2026-06-11",
+      "cost": 20000,
+      "quantity": null,
+      "coupons_received": 0,
+      "maturity": "2027-06-11",
+      "rate_gross": 2.5,
+      "manual_value": null,
+      "broker": "Banca B",
+      "guaranteed": false,
+      "note": "Dato di esempio: il valore si calcola da tasso e scadenza."
+    }
+  ],
+  "journal": [
+    {
+      "id": "esempio-voce",
+      "date": "2026-09-25",
+      "tag": "Riflessione",
+      "purchase_id": null,
+      "text": "**Voce di esempio.** Scrivi qui perché hai fatto una scelta, cosa ti preoccupa e cosa vuoi rileggere tra qualche mese.\n\n- puoi usare elenchi\n- e *corsivo*, __sottolineato__"
+    }
+  ]
+}

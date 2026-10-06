@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stash — ETF</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="./diario.html">
+    <span class="brand-name">Stash</span>
+    <span class="brand-sub">personal finance</span>
+  </a>
+
+  <div class="sync" id="sync-status"></div>
+
+  <div class="nav-links">
+    <a href="./index.html">Obbligazioni</a>
+    <a href="./etf.html" class="active">ETF</a>
+    <a href="./diario.html">Diario</a>
+  </div>
+</nav>
+
+  <h1>ETF in watchlist</h1>
+  <div class="meta" id="meta">Caricamento...</div>
+  <div class="benchmarks" id="benchmarks"></div>
+
+  <form class="filters" id="filters">
+    <label>Proietta a (anni)
+      <input type="number" id="f-years" value="5" min="1" step="1">
+    </label>
+    <label>Rendimento storico di riferimento
+      <select id="f-basis">
+        <option value="1y">Ultimo anno</option>
+        <option value="3y" selected>Ultimi 3 anni (annualizzato)</option>
+        <option value="5y">Ultimi 5 anni (annualizzato)</option>
+      </select>
+    </label>
+    <label>Importo da investire (€)
+      <input type="number" id="f-amount" value="10000" min="1" step="500">
+    </label>
+    <label>Inflazione attesa (%)
+      <input type="number" id="f-inflation" step="0.1">
+    </label>
+    <label>Conto deposito lordo (%)
+      <input type="number" id="f-deposit" step="0.1">
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="f-fav">
+      Solo ★ preferiti
+    </label>
+    <label>&nbsp;
+      <button type="button" class="btn-secondary" id="btn-export">Scarica CSV</button>
+    </label>
+  </form>
+
+  <div class="wrap">
+    <table id="etf-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th data-key="name">ETF</th>
+          <th data-key="ter">TER %</th>
+          <th data-key="growth_rate">Rend. storico %</th>
+          <th data-key="volatility">Volatilità %</th>
+          <th data-key="_spark">Prezzo 90gg</th>
+          <th data-key="net_annualized_pct">Netto ann. %</th>
+          <th data-key="vs_deposit">vs benchmark</th>
+          <th data-key="net_gain">Guadagno netto €</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="footnote">
+    Proiezione statistica sul passato (rendimento storico capitalizzato
+    sugli anni scelti + dividendi non reinvestiti), non una promessa: il
+    passato non garantisce il futuro. Tassazione semplificata al 26% fisso
+    sul guadagno lordo, anche per fondi con quota in titoli di Stato
+    italiani (che avrebbero il 12,5%).
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-panel" id="modal-panel"></div>
+  </div>
+
+<script type="module" src="./js/etf.js"></script>
+</body>
+</html>

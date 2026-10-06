@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stash — Diario</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="./diario.html">
+    <span class="brand-name">Stash</span>
+    <span class="brand-sub">personal finance</span>
+  </a>
+
+  <div class="sync" id="sync-status"></div>
+
+  <div class="nav-links">
+    <a href="./index.html">Obbligazioni</a>
+    <a href="./etf.html">ETF</a>
+    <a href="./diario.html" class="active">Diario</a>
+  </div>
+</nav>
+
+  <h1>Diario e acquisti</h1>
+  <div class="meta" id="meta">Caricamento...</div>
+
+  <div class="toolbar">
+    <button type="button" class="btn-primary" id="btn-save" data-sync="save" hidden>Salva</button>
+    <span class="hint" id="sync-detail"></span>
+  </div>
+  <div class="toolbar">
+    <button type="button" class="btn-secondary" data-action="export">Esporta JSON</button>
+    <button type="button" class="btn-secondary" data-action="import">Importa JSON</button>
+    <input type="file" id="file-import" accept="application/json,.json" hidden>
+    <span class="hint">Copia di backup in un file: "Importa" sostituisce tutto ciò che c'è qui.</span>
+  </div>
+
+  <div class="stat-cards" id="stats"></div>
+
+  <div class="toolbar">
+    <button type="button" class="btn-secondary" data-action="refresh-market">Aggiorna dati di mercato</button>
+    <span class="hint" id="market-asof"></span>
+  </div>
+
+  <h2 class="section-title">Osservati ★</h2>
+  <div class="wrap" id="fav-wrap">
+    <table id="fav-table">
+      <thead>
+        <tr>
+          <th>Strumento</th>
+          <th>Scadenza</th>
+          <th>Rendimento</th>
+          <th>Rischio</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="fav-body"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="fav-empty">Nessun preferito: premi la ☆ accanto a un titolo nelle pagine Obbligazioni ed ETF per tenerlo d'occhio qui.</div>
+
+  <h2 class="section-title">Acquisti</h2>
+  <div class="toolbar">
+    <button type="button" class="btn-primary" data-action="add-purchase">Aggiungi acquisto</button>
+    <select id="filter-broker" aria-label="Filtra per broker"></select>
+    <span id="broker-chips" class="broker-chips"></span>
+  </div>
+  <div class="wrap" id="purchases-wrap">
+    <table id="purchases-table">
+      <thead>
+        <tr>
+          <th data-sort="name">Strumento</th>
+          <th data-sort="date">Data</th>
+          <th data-sort="cost">Costo</th>
+          <th data-sort="value">Valore oggi</th>
+          <th data-sort="pl">Differenza</th>
+          <th data-sort="maturity" class="sorted">Scadenza</th>
+          <th data-sort="expectedNet">Netto atteso a scadenza</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="purchases-body"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="purchases-empty">Nessun acquisto registrato.</div>
+  <div class="footnote">
+    Per BOT/BTP ed ETF in euro presenti nei nostri dati il valore si aggiorna
+    da solo (per i titoli di Stato è quanto costerebbe comprarli oggi, quindi
+    sopra il prezzo a cui li venderesti); per certificati e il resto
+    inserisci tu il valore attuale quando vuoi. "Netto atteso a scadenza" è
+    una stima dal piano cashflow, tolti costo pagato e tassa, non il calcolo
+    esatto dell'intermediario. Il costo include le commissioni, quindi un
+    acquisto appena fatto parte di pochi euro sotto zero. Per i conti deposito
+    con tasso lordo e scadenza, il valore è capitale più interessi netti
+    maturati fino a oggi (26% di tassa, come da banca).
+  </div>
+
+  <h2 class="section-title">Diario</h2>
+  <div class="toolbar">
+    <button type="button" class="btn-primary" data-action="add-entry">Nuova voce</button>
+  </div>
+  <div id="journal"></div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-panel" id="modal-panel"></div>
+  </div>
+
+<script type="module" src="./js/diario.js"></script>
+</body>
+</html>
