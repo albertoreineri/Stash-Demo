@@ -6,6 +6,9 @@ import { renderRich, toolbarHtml, attachEditor } from './richtext.js';
 import { buildBondHead, buildBondBody } from './bondModal.js';
 import { buildEtfHead, buildEtfBody } from './etfModal.js';
 import { project } from './etfProject.js';
+import { initGuide } from './guide.js';
+
+initGuide('diario');
 
 const KIND_LABELS = {
   bond: 'Obbligazione',

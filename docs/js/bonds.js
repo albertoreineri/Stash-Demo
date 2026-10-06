@@ -5,6 +5,9 @@ import {
 import { getFavorites, toggleFavorite } from './store.js';
 import { initSyncUi } from './sync-ui.js';
 import { couponLabel, buildBondModalContent } from './bondModal.js';
+import { initGuide } from './guide.js';
+
+initGuide('bonds');
 
 const NOMINAL = 10000;
 

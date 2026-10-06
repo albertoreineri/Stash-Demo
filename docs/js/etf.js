@@ -6,6 +6,11 @@ import { getFavorites, toggleFavorite } from './store.js';
 import { initSyncUi } from './sync-ui.js';
 import { project } from './etfProject.js';
 import { buildEtfModalContent } from './etfModal.js';
+import { initGuide } from './guide.js';
+import { initAddEtf } from './etfAdd.js';
+
+initGuide('etf');
+initAddEtf(document.getElementById('btn-add-etf'));
 
 let allEtfs = [];
 let sparklines = {};

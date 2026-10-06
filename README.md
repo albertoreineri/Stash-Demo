@@ -23,6 +23,14 @@ non c'è un account, non c'è un server, e i tuoi dati restano sul tuo computer.
   sono pubblici (inflazione Eurostat per l'area euro, tasso sui depositi della
   BCE) e si aggiornano con `npm run update:benchmarks`. Puoi cambiarli nel sito.
 
+Ogni pagina ha un pulsante **Guida** nella barra in alto: la prima volta si
+apre da sola e spiega come leggere la pagina.
+
+Per aggiungere un ETF che non è nella watchlist, il pulsante **Aggiungi ETF**
+nella pagina ETF ti prepara la riga da inserire in `config/etf-watchlist.json`
+e i comandi per aggiornare i dati. Il sito statico non può farlo da solo, perché
+Yahoo Finance non risponde al browser.
+
 ## Avvio in locale
 
 Serve Node.js 20 o superiore per aggiornare i dati. Per guardare il sito basta
